@@ -1,0 +1,120 @@
+================================================================================
+                        SAMPLE RESUME FOR TESTING
+================================================================================
+
+RAJESH KUMAR
+📧 rajesh.kumar@email.com | 📱 +91-9876543210 | 📍 Bangalore, India
+GitHub: github.com/rajesh-kumar | LinkedIn: linkedin.com/in/rajesh-kumar
+
+================================================================================
+PROFESSIONAL SUMMARY
+================================================================================
+Passionate Full Stack Developer with 5+ years of experience in designing and
+developing scalable web applications using MERN stack (MongoDB, Express, React,
+Node.js). Strong expertise in AWS deployment, Docker containerization, and
+database optimization. Proven track record of delivering high-quality code and
+leading cross-functional teams.
+
+================================================================================
+TECHNICAL SKILLS
+================================================================================
+Languages:        JavaScript (ES6+), TypeScript, Python, HTML, CSS
+Frontend:         React, Redux, Next.js, Tailwind CSS, Material-UI
+Backend:          Node.js, Express.js, Django, FastAPI
+Databases:        MongoDB, PostgreSQL, MySQL, Firebase
+DevOps & Tools:   AWS (EC2, S3, RDS), Docker, Kubernetes, Git, Jenkins
+Testing:          Jest, Mocha, Chai, React Testing Library
+Other:            REST APIs, GraphQL, Microservices, Webpack, Babel
+
+================================================================================
+PROFESSIONAL EXPERIENCE
+================================================================================
+
+SENIOR FULL STACK DEVELOPER
+TechVision India Pvt Ltd | Bangalore, India
+January 2022 - Present
+
+• Architected and developed microservices-based platform serving 100K+ users
+• Led development of real-time collaboration features using WebSockets
+• Improved application performance by 40% through code optimization
+• Mentored junior developers and conducted code reviews
+• Implemented CI/CD pipelines using Jenkins and Docker
+• Technologies: MERN Stack, PostgreSQL, Docker, AWS, GraphQL
+
+FULL STACK DEVELOPER
+InnovateTech Solutions | Bangalore, India
+June 2020 - December 2021
+
+• Developed and maintained 15+ production React applications
+• Implemented responsive UI components achieving 98% browser compatibility
+• Built RESTful APIs handling 1M+ requests per day
+• Reduced API response time by 35% through query optimization
+• Collaborated with UX team to improve user experience
+• Technologies: React, Node.js, MongoDB, Express, Docker
+
+JUNIOR DEVELOPER
+StartupHub | Bangalore, India
+July 2019 - May 2020
+
+• Developed features for web platform using React and Node.js
+• Participated in agile development process with 2-week sprints
+• Fixed bugs and improved code quality
+• Technologies: React, Node.js, MongoDB, Git
+
+================================================================================
+EDUCATION
+================================================================================
+
+BACHELOR OF TECHNOLOGY IN COMPUTER SCIENCE
+Indian Institute of Technology (IIT) | Bangalore, India
+Graduated: May 2019
+CGPA: 8.2/10.0
+
+================================================================================
+CERTIFICATIONS & COURSES
+================================================================================
+
+• AWS Certified Solutions Architect Associate (2021)
+• MongoDB Developer Certified Associate (2021)
+• React Advanced Patterns & Optimization (Udemy, 2022)
+• Microservices Architecture (Coursera, 2021)
+
+================================================================================
+PROJECTS
+================================================================================
+
+1. Real-time Collaboration Platform
+   - Built scalable platform for team collaboration with real-time updates
+   - Technologies: React, Node.js, WebSockets, MongoDB, AWS
+   - Result: Achieved 99.9% uptime, supports 10K+ concurrent users
+
+2. E-commerce Dashboard
+   - Developed analytics dashboard with complex data visualizations
+   - Technologies: React, Redux, Chart.js, Node.js
+   - Result: Reduced reporting time by 50%
+
+3. Mobile API Backend
+   - Designed and built RESTful API for iOS/Android mobile applications
+   - Technologies: Node.js, Express, PostgreSQL, Docker
+   - Result: 500K+ API calls per day with 99.95% uptime
+
+================================================================================
+ACHIEVEMENTS & AWARDS
+================================================================================
+
+• Employee of the Month (March 2023, TechVision India)
+• Best Code Quality Award (2022)
+• Innovation Award for Performance Optimization (2021)
+
+================================================================================
+LANGUAGES
+================================================================================
+
+English: Fluent
+Hindi: Native
+Telugu: Conversational
+
+================================================================================
+This is a sample resume file for testing the resume download functionality.
+In production, actual PDF files would be stored in the uploads/resumes directory.
+================================================================================

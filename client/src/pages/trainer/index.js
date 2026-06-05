@@ -1,0 +1,10 @@
+export { default as Dashboard } from './Dashboard';
+export { default as Profile } from './Profile';
+export { default as AddCourse } from './AddCourse';
+export { default as MyCourses } from './MyCourses';
+export { default as Workshops } from './Workshops';
+export { default as Assignments } from './Assignments';
+export { default as MockInterviews } from './MockInterviews';
+export { default as StudentProgress } from './StudentProgress';
+export { default as Certificates } from './Certificates';
+export { default as Settings } from './Settings';

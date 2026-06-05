@@ -1,0 +1,600 @@
+/* Applicant Card Modern Styles */
+
+.applicant-card-modern {
+  background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1.5px solid var(--border);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+  animation: slideUp 0.4s ease-out;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.applicant-card-modern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-accent) 0%, var(--info) 100%);
+}
+
+.applicant-card-modern:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(26, 155, 138, 0.15);
+  border-color: var(--primary-accent);
+}
+
+/* Status specific colors */
+.applicant-card-modern.applicant-status-pending::before {
+  background: linear-gradient(90deg, #f59e0b 0%, #f97316 100%);
+}
+
+.applicant-card-modern.applicant-status-reviewed::before {
+  background: linear-gradient(90deg, #3b82f6 0%, #1d4ed8 100%);
+}
+
+.applicant-card-modern.applicant-status-accepted::before {
+  background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+}
+
+.applicant-card-modern.applicant-status-rejected::before {
+  background: linear-gradient(90deg, #ef4444 0%, #dc2626 100%);
+}
+
+/* Status Badge */
+.applicant-status-badge {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 8px;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  border: 1.5px solid;
+}
+
+.status-badge.status-pending {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(245, 158, 11, 0.05));
+  color: #f59e0b;
+  border-color: rgba(245, 158, 11, 0.3);
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.1);
+}
+
+.status-badge.status-reviewed {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(59, 130, 246, 0.05));
+  color: #3b82f6;
+  border-color: rgba(59, 130, 246, 0.3);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.1);
+}
+
+.status-badge.status-accepted {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(16, 185, 129, 0.05));
+  color: #10b981;
+  border-color: rgba(16, 185, 129, 0.3);
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.1);
+}
+
+.status-badge.status-rejected {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(239, 68, 68, 0.05));
+  color: #ef4444;
+  border-color: rgba(239, 68, 68, 0.3);
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.1);
+}
+
+/* Header Section */
+.applicant-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1.5px solid var(--border);
+}
+
+.applicant-name-section {
+  flex: 1;
+}
+
+.applicant-name {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text);
+  margin: 0 0 6px 0;
+  letter-spacing: -0.3px;
+  line-height: 1.2;
+}
+
+.applicant-position {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary-accent);
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+.applicant-badge-container {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.position-level {
+  display: inline-block;
+  padding: 8px 14px;
+  background: linear-gradient(135deg, rgba(26, 155, 138, 0.15), rgba(26, 155, 138, 0.08));
+  color: var(--primary-accent);
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  border: 1.5px solid var(--primary-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+}
+
+/* Contact Info */
+.applicant-contact {
+  margin-top: 8px;
+}
+
+.applicant-email-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+  color: var(--primary-accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.applicant-email-link:hover {
+  background: rgba(26, 155, 138, 0.08);
+  transform: translateX(2px);
+}
+
+/* Info Grid */
+.applicant-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  padding: 12px;
+  background: rgba(26, 155, 138, 0.03);
+  border-radius: 10px;
+  border: 1px solid rgba(26, 155, 138, 0.1);
+}
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.info-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.file-link {
+  color: var(--primary-accent);
+  text-decoration: none;
+  font-weight: 700;
+  transition: all var(--transition-fast);
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.file-link:hover {
+  border-bottom-color: var(--primary-accent);
+  background: rgba(26, 155, 138, 0.08);
+  transform: translateX(2px);
+}
+
+.file-link:active {
+  opacity: 0.8;
+  transform: translateX(0);
+}
+
+/* Cover Letter Section */
+.applicant-cover-letter {
+  padding: 12px 14px;
+  background: linear-gradient(135deg, rgba(26, 155, 138, 0.05), rgba(26, 155, 138, 0.02));
+  border-left: 3px solid var(--primary-accent);
+  border-radius: 8px;
+}
+
+.cover-letter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.cover-letter-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.expand-link {
+  font-size: 0.8rem;
+  color: var(--primary-accent);
+  text-decoration: none;
+  font-weight: 700;
+  transition: all var(--transition-fast);
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  display: inline-block;
+}
+
+.expand-link:hover {
+  background: rgba(26, 155, 138, 0.1);
+  border-color: var(--primary-accent);
+  transform: translateY(-1px);
+}
+
+.expand-link:active {
+  transform: translateY(0);
+  opacity: 0.8;
+}
+
+.cover-letter-preview {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-light);
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-height: 150px;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.applicant-cover-letter:has(.expand-link:focus) .cover-letter-preview,
+.applicant-cover-letter:has(.cover-letter-preview:focus-within) .cover-letter-preview {
+  max-height: none;
+}
+
+/* Action Buttons */
+.applicant-actions-modern {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 16px 0 12px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin-top: 12px;
+}
+
+.btn-action-primary,
+.btn-action-success,
+.btn-action-danger,
+.btn-action-secondary,
+.btn-action-info,
+.btn-action-view {
+  padding: 12px 14px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-height: 38px;
+  pointer-events: auto;
+  user-select: none;
+}
+
+.btn-action-primary {
+  background: linear-gradient(135deg, var(--primary-accent) 0%, var(--primary-hover) 100%);
+  color: white;
+  box-shadow: 0 2px 8px rgba(26, 155, 138, 0.15);
+}
+
+.btn-action-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(26, 155, 138, 0.25);
+}
+
+.btn-action-success {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.15);
+}
+
+.btn-action-success:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+}
+
+.btn-action-danger {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.15);
+}
+
+.btn-action-danger:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.25);
+}
+
+.btn-action-secondary {
+  background: white;
+  color: var(--primary-accent);
+  border: 2px solid var(--primary-accent);
+}
+
+.btn-action-secondary:hover {
+  background: var(--primary-accent);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-action-info {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.15);
+}
+
+.btn-action-info:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+}
+
+.btn-action-view {
+  background: linear-gradient(135deg, rgba(26, 155, 138, 0.1), rgba(26, 155, 138, 0.05));
+  color: var(--primary-accent);
+  border: 1.5px solid var(--primary-accent);
+  box-shadow: 0 2px 6px rgba(26, 155, 138, 0.08);
+}
+
+.btn-action-view:hover {
+  background: var(--primary-accent);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(26, 155, 138, 0.2);
+}
+
+/* Card Footer */
+.applicant-card-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 8px;
+}
+
+.footer-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.stat-value {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.stat-value.status-text-pending {
+  color: #f59e0b;
+}
+
+.stat-value.status-text-reviewed {
+  color: #3b82f6;
+}
+
+.stat-value.status-text-accepted {
+  color: #10b981;
+}
+
+.stat-value.status-text-rejected {
+  color: #ef4444;
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .applicant-card-modern {
+    padding: 18px;
+    gap: 14px;
+  }
+
+  .applicant-card-header {
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .applicant-actions-modern {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 14px 0 10px 0;
+    margin-top: 10px;
+  }
+
+  .btn-action-primary,
+  .btn-action-success,
+  .btn-action-danger,
+  .btn-action-secondary,
+  .btn-action-info,
+  .btn-action-view {
+    padding: 10px 12px;
+    font-size: 0.7rem;
+    min-height: 36px;
+    gap: 3px;
+  }
+
+  .applicant-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .applicant-card-footer {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .applicant-name {
+    font-size: 1.1rem;
+  }
+
+  .cover-letter-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .applicant-card-modern {
+    padding: 14px;
+    gap: 12px;
+    border-radius: 12px;
+  }
+
+  .applicant-status-badge {
+    margin-bottom: 12px;
+  }
+
+  .applicant-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 8px 0 12px 0;
+  }
+
+  .applicant-name-section {
+    width: 100%;
+  }
+
+  .applicant-name {
+    font-size: 0.95rem;
+  }
+
+  .applicant-position {
+    font-size: 0.9rem;
+  }
+
+  .applicant-badge-container {
+    width: 100%;
+  }
+
+  .position-level {
+    width: 100%;
+    text-align: center;
+    padding: 8px 12px;
+  }
+
+  .applicant-actions-modern {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 12px 0 8px 0;
+    margin-top: 8px;
+  }
+
+  .btn-action-primary,
+  .btn-action-success,
+  .btn-action-danger,
+  .btn-action-secondary,
+  .btn-action-info,
+  .btn-action-view {
+    padding: 9px 10px;
+    font-size: 0.65rem;
+    min-height: 34px;
+    gap: 2px;
+  }
+
+  .status-badge {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+  }
+
+  .applicant-info-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .info-label {
+    font-size: 0.75rem;
+  }
+
+  .info-value {
+    font-size: 0.85rem;
+  }
+
+  .applicant-card-footer {
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.85rem;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+  }
+
+  .stat-value {
+    font-size: 0.9rem;
+  }
+
+  .cover-letter-preview {
+    font-size: 0.9rem;
+  }
+}

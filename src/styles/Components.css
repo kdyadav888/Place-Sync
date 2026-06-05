@@ -1,0 +1,1441 @@
+﻿.navbar {
+  background: linear-gradient(to right, var(--light) 0%, var(--primary-light) 100%);
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 2px solid var(--primary-subtle);
+  backdrop-filter: blur(10px);
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 85px;
+}
+
+.navbar-logo {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary-accent);
+  text-decoration: none;
+  transition: all var(--transition-normal);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: -1px;
+  flex-shrink: 0;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.08);
+  text-shadow: 0 4px 12px rgba(26, 155, 138, 0.2);
+}
+
+.nav-menu {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.nav-link {
+  color: var(--text);
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  transition: all var(--transition-fast);
+  font-weight: 600;
+  font-size: 1rem;
+  position: relative;
+  white-space: nowrap;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--primary-accent);
+  transform: translateX(-50%);
+  transition: width var(--transition-normal);
+}
+
+.nav-link:hover {
+  background: var(--primary-subtle);
+  color: var(--primary-accent);
+}
+
+.nav-link:hover::before {
+  width: calc(100% - 32px);
+}
+
+.nav-user {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  border-left: 2px solid var(--primary-subtle);
+  padding-left: 16px;
+}
+
+.btn-logout {
+  padding: 12px 20px;
+  background: linear-gradient(135deg, rgba(211, 47, 47, 0.1) 0%, rgba(211, 47, 47, 0.05) 100%);
+  color: var(--danger);
+  border: 1.5px solid var(--danger);
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.btn-logout::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(211, 47, 47, 0.2) 0%, rgba(211, 47, 47, 0.1) 100%);
+  transition: left var(--transition-fast);
+  z-index: -1;
+}
+
+.btn-logout:hover::before {
+  left: 0;
+}
+
+.btn-logout:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(211, 47, 47, 0.2);
+}
+
+.btn-logout:active {
+  transform: translateY(0);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--primary-accent);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.menu-toggle:hover {
+  transform: rotate(90deg);
+}
+
+/* Recruiter Navigation Styles */
+.recruiter-nav-links {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
+  overflow-x: auto;
+  padding-right: 16px;
+  scroll-behavior: smooth;
+  max-width: 100%;
+}
+
+.recruiter-nav-links::-webkit-scrollbar {
+  height: 4px;
+}
+
+.recruiter-nav-links::-webkit-scrollbar-track {
+  background: rgba(26, 155, 138, 0.1);
+  border-radius: 10px;
+}
+
+.recruiter-nav-links::-webkit-scrollbar-thumb {
+  background: var(--primary-accent);
+  border-radius: 10px;
+}
+
+.recruiter-nav-links::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-hover);
+}
+
+.recruiter-nav-links .nav-link {
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  background: rgba(26, 155, 138, 0.08);
+  border: 1px solid rgba(26, 155, 138, 0.2);
+  border-radius: 6px;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.recruiter-nav-links .nav-link:hover {
+  background: rgba(26, 155, 138, 0.15);
+  border-color: var(--primary-accent);
+  transform: translateY(-2px);
+}
+
+/* Trainer Navigation Styles */
+.trainer-nav-links {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
+  overflow-x: auto;
+  padding-right: 16px;
+  scroll-behavior: smooth;
+  max-width: 100%;
+}
+
+.trainer-nav-links::-webkit-scrollbar {
+  height: 4px;
+}
+
+.trainer-nav-links::-webkit-scrollbar-track {
+  background: rgba(26, 155, 138, 0.1);
+  border-radius: 10px;
+}
+
+.trainer-nav-links::-webkit-scrollbar-thumb {
+  background: var(--primary-accent);
+  border-radius: 10px;
+}
+
+.trainer-nav-links::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-hover);
+}
+
+.trainer-nav-links .nav-link {
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  background: rgba(26, 155, 138, 0.08);
+  border: 1px solid rgba(26, 155, 138, 0.2);
+  border-radius: 6px;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.trainer-nav-links .nav-link:hover {
+  background: rgba(26, 155, 138, 0.15);
+  border-color: var(--primary-accent);
+  transform: translateY(-2px);
+}
+
+/* Profile Dropdown Styles */
+.profile-dropdown-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.profile-btn {
+  padding: 10px 16px;
+  background: linear-gradient(135deg, rgba(26, 155, 138, 0.1) 0%, rgba(26, 155, 138, 0.05) 100%);
+  color: var(--primary-accent);
+  border: 1.5px solid var(--primary-accent);
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all var(--transition-normal);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(26, 155, 138, 0.2) 0%, rgba(26, 155, 138, 0.1) 100%);
+  transition: left var(--transition-fast);
+  z-index: -1;
+}
+
+.profile-btn:hover::before {
+  left: 0;
+}
+
+.profile-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(26, 155, 138, 0.2);
+  background: rgba(26, 155, 138, 0.15);
+}
+
+.profile-btn:active {
+  transform: translateY(0);
+}
+
+/* Generic button helpers for various pages */
+.btn {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all var(--transition-normal);
+}
+
+.btn-secondary {
+  background: #f3f4f6;
+  color: #333;
+  border: 1px solid #e5e7eb;
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+}
+
+.btn-small {
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  border-radius: 6px;
+}
+
+.btn-remove,
+.btn-delete-notif,
+.btn-mark-all,
+.btn-details,
+.btn-view-profile,
+.btn-remove-conn,
+.btn-message,
+.btn-send-message {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background: #eef2ff;
+  color: #3730a3;
+}
+
+.btn-remove:hover,
+.btn-delete-notif:hover,
+.btn-remove-conn:hover {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.btn-details:hover,
+.btn-view-profile:hover,
+.btn-message:hover,
+.btn-send-message:hover,
+.btn-mark-all:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(55, 48, 163, 0.08);
+}
+
+.profile-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--light);
+  border: 1.5px solid var(--primary-accent);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  margin-top: 8px;
+  z-index: 1000;
+  min-width: 200px;
+  overflow: hidden;
+  animation: slideDown 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  transform-origin: top right;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  transition: all var(--transition-fast);
+  border-bottom: 1px solid var(--primary-subtle);
+  position: relative;
+  overflow: hidden;
+}
+
+.dropdown-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(26, 155, 138, 0.15) 0%, rgba(26, 155, 138, 0.08) 100%);
+  transition: left var(--transition-fast);
+  z-index: -1;
+}
+
+.dropdown-item:hover::before {
+  left: 0;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown-item:hover {
+  background: rgba(26, 155, 138, 0.1);
+  color: var(--primary-accent);
+  padding-left: 20px;
+  font-weight: 600;
+}
+
+.dropdown-item:active {
+  background: rgba(26, 155, 138, 0.15);
+  transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 85px;
+    left: 0;
+    right: 0;
+    background: var(--light);
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    visibility: hidden;
+    transition: opacity var(--transition-normal), transform var(--transition-normal), visibility var(--transition-normal);
+    border-bottom: 2px solid var(--primary-subtle);
+  }
+
+  .nav-menu.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  .recruiter-nav-links {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 8px;
+    overflow-x: visible;
+    padding-right: 0;
+    width: 100%;
+  }
+
+  .recruiter-nav-links .nav-link {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    flex: 1 1 calc(50% - 8px);
+    min-width: 140px;
+  }
+
+  .nav-user {
+    flex-direction: column;
+    width: 100%;
+    border-left: none;
+    border-top: 2px solid var(--primary-subtle);
+    padding-left: 0;
+    padding-top: 12px;
+  }
+
+  .btn-logout {
+    width: 100%;
+  }
+}
+
+/* General Button Styles */
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all var(--transition-normal);
+  font-size: 0.95rem;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+  z-index: 0;
+}
+
+.btn:active::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn > * {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-accent) 0%, var(--primary-hover) 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(26, 155, 138, 0.3);
+}
+
+.btn-primary:active {
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: var(--primary-subtle);
+  color: var(--primary-accent);
+  border: 1.5px solid var(--primary-accent);
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-subtle) 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(26, 155, 138, 0.2);
+}
+
+.btn-success {
+  background: linear-gradient(135deg, var(--success) 0%, rgba(13, 126, 94, 0.8) 100%);
+  color: white;
+}
+
+.btn-success:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(13, 126, 94, 0.3);
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, var(--danger) 0%, rgba(211, 47, 47, 0.8) 100%);
+  color: white;
+}
+
+.btn-danger:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(211, 47, 47, 0.3);
+}
+
+.btn-warning {
+  background: linear-gradient(135deg, var(--warning) 0%, rgba(217, 119, 6, 0.8) 100%);
+  color: white;
+}
+
+.btn-warning:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(217, 119, 6, 0.3);
+}
+
+.btn-info {
+  background: linear-gradient(135deg, var(--info) 0%, rgba(8, 145, 178, 0.8) 100%);
+  color: white;
+}
+
+.btn-info:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(8, 145, 178, 0.3);
+}
+
+.btn-small {
+  padding: 8px 16px;
+  font-size: 0.85rem;
+}
+
+.btn-large {
+  padding: 14px 32px;
+  font-size: 1rem;
+}
+
+/* Badge Styles */
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  background: var(--primary-subtle);
+  color: var(--primary-accent);
+  letter-spacing: 0.5px;
+  animation: fadeIn var(--transition-normal);
+}
+
+.badge.success {
+  background: rgba(13, 126, 94, 0.1);
+  color: var(--success);
+}
+
+.badge.danger {
+  background: rgba(211, 47, 47, 0.1);
+  color: var(--danger);
+}
+
+.badge.warning {
+  background: rgba(217, 119, 6, 0.1);
+  color: var(--warning);
+}
+
+.badge.info {
+  background: rgba(8, 145, 178, 0.1);
+  color: var(--info);
+}
+
+/* Messages Container */
+.messages-container {
+  display: flex;
+  height: calc(100vh - 90px);
+  gap: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+  display: flex;
+  width: 100%;
+}
+
+.conversations-list {
+  width: 300px;
+  border-right: 1px solid #e5e7eb;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.conversations-list h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.conversation-item {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+  border: 2px solid transparent;
+}
+
+.conversation-item:hover {
+  background: #f8f9fa;
+  border-color: #667eea;
+}
+
+.conversation-item.active {
+  background: #dbeafe;
+  border-color: #667eea;
+}
+
+.conversation-item img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.conversation-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.conversation-info h4 {
+  color: #333;
+  margin-bottom: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.conversation-info p {
+  color: #999;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+
+.unread {
+  background: #667eea;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+/* LinkedIn-Style Messages Chat */
+.messages-chat,
+.linkedin-chat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: white;
+}
+
+/* LinkedIn Sidebar */
+.linkedin-sidebar {
+  width: 320px;
+  border-right: 1px solid #d0d7de;
+  display: flex;
+  flex-direction: column;
+  background: white;
+}
+
+.linkedin-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0 !important;
+}
+
+.linkedin-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+}
+
+.conversation-count {
+  background: #e7f1f9;
+  color: #0a66c2;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.search-container {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.linkedin-search {
+  width: 100% !important;
+  padding: 10px 14px !important;
+  border: 1px solid #d0d7de !important;
+  border-radius: 20px !important;
+  font-size: 0.9rem !important;
+  background: #f3f2ef !important;
+  transition: all 0.2s ease !important;
+}
+
+.linkedin-search:focus {
+  background: white !important;
+  border-color: #0a66c2 !important;
+  outline: none !important;
+}
+
+.conversations-scroll {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.linkedin-conversation {
+  display: flex;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  align-items: flex-start;
+}
+
+.linkedin-conversation:hover {
+  background: #f8f9fa;
+}
+
+.linkedin-conversation.active {
+  background: #e7f1f9;
+  border-right: 3px solid #0a66c2;
+}
+
+.conv-avatar-container {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.linkedin-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0a66c2 0%, #005fa3 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.unread-indicator {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  background: #0a66c2;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.conversation-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.conv-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #000;
+  margin: 0 0 4px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.linkedin-preview {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.unread-badge {
+  background: #0a66c2;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+/* LinkedIn Chat Header */
+.linkedin-chat-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid #d0d7de;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recipient-info {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.recipient-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.recipient-details h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+}
+
+.recipient-role {
+  font-size: 0.8rem;
+  color: #666;
+  margin: 0;
+}
+
+.chat-header-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: #f3f2ef;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  color: #666;
+}
+
+.icon-btn:hover {
+  background: #e7e5e1;
+  transform: scale(1.05);
+}
+
+.icon-btn:active {
+  transform: scale(0.95);
+}
+
+/* LinkedIn Messages */
+.linkedin-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: white;
+}
+
+.message-group {
+  display: flex;
+  margin-bottom: 4px;
+}
+
+.message-group.sent {
+  justify-content: flex-end;
+}
+
+.message-group.received {
+  justify-content: flex-start;
+}
+
+.linkedin-message {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+  max-width: 55%;
+}
+
+.message-group.sent .linkedin-message {
+  flex-direction: row-reverse;
+}
+
+.message-bubble {
+  background: #e7f1f9;
+  color: #000;
+  padding: 12px 16px;
+  border-radius: 18px;
+  word-wrap: break-word;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.message-group.sent .message-bubble {
+  background: #0a66c2;
+  color: white;
+}
+
+.message-time {
+  font-size: 0.75rem;
+  color: #999;
+  white-space: nowrap;
+}
+
+.no-messages-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #999;
+  font-size: 1.1rem;
+}
+
+/* LinkedIn Input Form */
+.linkedin-input-form {
+  padding: 16px 20px;
+  border-top: 1px solid #d0d7de;
+  background: white;
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.input-container {
+  flex: 1;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  background: #f3f2ef;
+  border-radius: 20px;
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.input-container:focus-within {
+  background: white;
+  border-color: #0a66c2;
+}
+
+.linkedin-message-input {
+  flex: 1;
+  border: none !important;
+  background: transparent !important;
+  padding: 8px 4px !important;
+  font-size: 0.95rem !important;
+  color: #000 !important;
+}
+
+.linkedin-message-input::placeholder {
+  color: #999;
+}
+
+.linkedin-message-input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.input-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.linkedin-send-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none !important;
+  background: #0a66c2 !important;
+  color: white !important;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.linkedin-send-btn:hover:not(:disabled) {
+  background: #005fa3 !important;
+  transform: scale(1.05);
+}
+
+.linkedin-send-btn:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.linkedin-send-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* LinkedIn Empty State */
+.linkedin-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  background: white;
+}
+
+.empty-state {
+  text-align: center;
+  color: #666;
+}
+
+.empty-icon {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.empty-state h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000;
+  margin: 0 0 8px 0;
+}
+
+.empty-state p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.no-conversation-selected {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  color: #999;
+  font-size: 1.1rem;
+}
+
+/* Scrollbar Styling */
+.conversations-scroll::-webkit-scrollbar,
+.linkedin-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.conversations-scroll::-webkit-scrollbar-track,
+.linkedin-messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.conversations-scroll::-webkit-scrollbar-thumb,
+.linkedin-messages::-webkit-scrollbar-thumb {
+  background: #d0d7de;
+  border-radius: 3px;
+}
+
+.conversations-scroll::-webkit-scrollbar-thumb:hover,
+.linkedin-messages::-webkit-scrollbar-thumb:hover {
+  background: #a6b0be;
+}
+
+.notifications-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.notifications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.notifications-header h1 {
+  color: #333;
+}
+
+/* ============================================
+   UTILITY CLASSES - SHOW/HIDE ANIMATIONS
+   ============================================ */
+
+/* Fade In/Out - Simple Opacity Transition */
+.show-fade {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.hide-fade {
+  animation: fadeOut 0.3s ease-in forwards;
+}
+
+/* Slide Up/Down - For Dropdowns & Menus */
+.show-slide-down {
+  animation: slideDown 0.3s ease-out forwards;
+}
+
+.show-slide-up {
+  animation: slideInUp 0.3s ease-out forwards;
+}
+
+.hide-slide-up {
+  animation: slideInDown 0.2s ease-in forwards;
+}
+
+/* Scale In/Out - For Modals & Pop-ups */
+.show-scale {
+  animation: scaleIn 0.3s ease-out forwards;
+}
+
+.hide-scale {
+  animation: scaleOut 0.2s ease-in forwards;
+}
+
+/* Slide In/Out from Left */
+.show-slide-left {
+  animation: slideInRight 0.3s ease-out forwards;
+}
+
+.hide-slide-left {
+  animation: slideInLeft 0.2s ease-in forwards;
+}
+
+/* Generic Show/Hide States */
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transform: translateY(-10px);
+}
+
+.visible {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out, visibility 0.3s ease-out;
+}
+
+/* Display Control */
+.d-none {
+  display: none !important;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.d-inline {
+  display: inline !important;
+}
+  margin: 0;
+}
+
+.notification-filter {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.notifications-list {
+  display: grid;
+  gap: 15px;
+}
+
+.notification-item {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 15px;
+  align-items: start;
+  transition: all 0.3s ease;
+  border-left: 4px solid #667eea;
+}
+
+.notification-item.unread {
+  background: #f0f9ff;
+}
+
+.notification-icon {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.notification-content {
+  flex: 1;
+}
+
+.notification-content h3 {
+  color: #333;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+
+.notification-content p {
+  color: #666;
+  margin: 5px 0;
+  font-size: 0.95rem;
+}
+
+.notification-time {
+  color: #999;
+  font-size: 0.85rem;
+}
+
+.notification-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.connection-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-accept,
+.btn-reject {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-accept {
+  background: #10b981;
+  color: white;
+}
+
+.btn-accept:hover {
+  background: #059669;
+}
+
+.btn-reject {
+  background: #ef4444;
+  color: white;
+}
+
+.btn-reject:hover {
+  background: #dc2626;
+}
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.status-badge.accepted {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.status-badge.rejected {
+  background: #fee2e2;
+  color: #7f1d1d;
+}
+
+.notification-from {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 8px 0 4px 0;
+}
+
+.notification-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.mark-read-btn,
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #999;
+  transition: all 0.3s ease;
+}
+
+.mark-read-btn:hover {
+  color: #10b981;
+}
+
+.delete-btn:hover {
+  color: #ef4444;
+}
+
+.no-notifications {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.no-connections {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.no-requests {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .messages-container {
+    flex-direction: column;
+  }
+
+  .conversations-list {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+    max-height: 200px;
+  }
+
+  .notification-item {
+    flex-wrap: wrap;
+  }
+
+  .notification-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+

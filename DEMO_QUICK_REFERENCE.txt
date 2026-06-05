@@ -1,0 +1,88 @@
+╔════════════════════════════════════════════════════════════════════════════════╗
+║                    PlaceSync Demo Accounts - Quick Reference                    ║
+║                          Password: password123 (all)                            ║
+╚════════════════════════════════════════════════════════════════════════════════╝
+
+┌─ STUDENT ACCOUNTS (10) ─────────────────────────────────────────────────────────┐
+│                                                                                   │
+│ 1. Arjun Mehta              | arjun.mehta@student.com        | React, Node.js    │
+│ 2. Sneha Iyer              | sneha.iyer@student.com         | Python, Django    │
+│ 3. Rahul Chopra            | rahul.chopra@student.com       | ML, Data Science  │
+│ 4. Pooja Saxena            | pooja.saxena@student.com       | Data Analysis     │
+│ 5. Nikhil Joshi            | nikhil.joshi@student.com       | AWS, Docker       │
+│ 6. Kavya Nair              | kavya.nair@student.com         | Java, Spring Boot │
+│ 7. Aditya Singh            | aditya.singh@student.com       | React Native      │
+│ 8. Divya Reddy             | divya.reddy@student.com        | Computer Vision   │
+│ 9. Ravi Kumar              | ravi.kumar@student.com         | Node.js, Backend  │
+│ 10. Neha Gupta             | neha.gupta@student.com         | DevOps, Cloud     │
+│                                                                                   │
+└───────────────────────────────────────────────────────────────────────────────────┘
+
+┌─ RECRUITER ACCOUNTS (8) ────────────────────────────────────────────────────────┐
+│                                                                                   │
+│ 1. Rajesh Kumar            | rajesh@tcs.com                 | TCS               │
+│ 2. Priya Sharma            | priya@infosys.com              | Infosys           │
+│ 3. Amit Patel              | amit@wipro.com                 | Wipro             │
+│ 4. Deepak Singh            | deepak@amazon.com              | Amazon India      │
+│ 5. Neha Gupta              | neha@flipkart.com              | Flipkart          │
+│ 6. Sanjay Verma            | sanjay@google.com              | Google India      │
+│ 7. Anjali Desai            | anjali@microsoft.com           | Microsoft India   │
+│ 8. Vikram Reddy            | vikram@accenture.com           | Accenture India   │
+│                                                                                   │
+└───────────────────────────────────────────────────────────────────────────────────┘
+
+┌─ TRAINER ACCOUNTS (5) ──────────────────────────────────────────────────────────┐
+│                                                                                   │
+│ 1. Dr. Mahesh Kumar        | mahesh.trainer@gmail.com       | Full Stack Dev    │
+│ 2. Priya Sharma            | priya.trainer@gmail.com        | Data Science      │
+│ 3. Rohit Verma             | rohit.trainer@gmail.com        | Cloud/DevOps      │
+│ 4. Anjali Singh            | anjali.trainer@gmail.com       | Frontend Dev      │
+│ 5. Vikram Patel            | vikram.trainer@gmail.com       | Java/Microservices│
+│                                                                                   │
+└───────────────────────────────────────────────────────────────────────────────────┘
+
+📊 TOTAL DEMO DATA:
+   ✓ 23 User Accounts
+   ✓ 10 Job Postings  
+   ✓ 8 Recruiters
+   ✓ 5 Trainers
+   ✓ 10 Students
+   ✓ Sample Applications & Messages
+   ✓ Connected Profiles
+   ✓ Saved Jobs
+   ✓ Interview Schedules
+
+🚀 QUICK START:
+   1. Run seed: node scripts/seedDatabase.js
+   2. Login with any email above
+   3. Password: password123
+
+📌 POPULAR TEST COMBINATIONS:
+   
+   Flow 1: Job Application
+   → Student: arjun.mehta@student.com
+   → Recruiter: rajesh@tcs.com
+   
+   Flow 2: Skill Development
+   → Student: sneha.iyer@student.com
+   → Trainer: mahesh.trainer@gmail.com
+   
+   Flow 3: Data Science Path
+   → Student: rahul.chopra@student.com
+   → Trainer: priya.trainer@gmail.com
+   → Recruiter: deepak@amazon.com
+
+🔐 SECURITY REMINDER:
+   ⚠️ This is for DEVELOPMENT ONLY
+   ⚠️ Change all passwords in PRODUCTION
+   ⚠️ Update emails and phone numbers
+   ⚠️ Review all permissions before launch
+
+📖 MORE INFORMATION:
+   • Full guide: See DEMO_ACCOUNTS.md
+   • Testing scenarios: See TESTING_GUIDE.md
+   • Seed script: backend/scripts/seedDatabase.js
+
+═══════════════════════════════════════════════════════════════════════════════════
+
+                     Happy Testing! 🎉 PlaceSync v1.0
