@@ -284,6 +284,8 @@ This project is licensed under the MIT License.
 
 For issues, questions, or suggestions, please contact the development team.
 
+mobile :- 7988590795
+Email id :- dy4347446@gmail.com
 ---
 
 **PlaceSync** - Connecting Education with Opportunities
